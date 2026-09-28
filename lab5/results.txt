@@ -1,0 +1,23 @@
+Run   Hill Climbing Cost  HC Iterations  SA Cost    SA Iterations
+---------------------------------------------------------------
+1     23.62                   4           28.82         135
+2     26.25                   2           26.25         135
+3     28.15                   4           29.43         135
+4     30.65                   3           29.35         135
+5     29.35                   4           23.62         135
+
+
+Hill Climbing Summary
+---------------------
+Best Cost              : 23.62
+Worst Cost             : 30.65
+Average Cost           : 27.60
+Average Iterations     : 3.4
+
+
+Simulated Annealing Summary
+---------------------------
+Best Cost              : 23.62
+Worst Cost             : 29.43
+Average Cost           : 27.43
+Average Iterations     : 135
