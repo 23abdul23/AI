@@ -1,0 +1,211 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 4682 >>
+stream
+q
+0.10 0.20 0.30 rg
+BT /F2 18 Tf 48 790 Td (AI Algorithms Guide) Tj ET
+BT /F1 9 Tf 48 762 Td (A file-by-file explanation of the Python programs in the AI laboratory folders.) Tj ET
+BT /F1 9 Tf 48 743 Td (This guide describes the algorithms as implemented in the source files and calls out important implementation limitations where they affect execution.) Tj ET
+BT /F1 9 Tf 48 724 Td (Contents: lab1 \(6 files\), lab2 \(2\), lab3 \(2\), lab4 \(2\), lab5 \(2\), lab7 \(2\).) Tj ET
+BT /F2 18 Tf 48 705 Td (lab1 - Introductory Search and Games) Tj ET
+BT /F2 12 Tf 48 677 Td (parking.py) Tj ET
+BT /F1 9 Tf 48 659 Td (Purpose: Reads a parking grid with E \(entrance\), R \(road\), A \(available\), and blocked cells,) Tj ET
+BT /F1 8 Tf 48 647 Td (then finds the nearest reachable parking space.) Tj ET
+BT /F1 9 Tf 48 636 Td (Algorithm: Breadth-first search \(BFS\) on a four-neighbor grid. The entrance is placed in a) Tj ET
+BT /F1 8 Tf 48 624 Td (FIFO queue. Each reachable R or A cell is visited once and its predecessor is recorded. The) Tj ET
+BT /F1 8 Tf 48 613 Td (first A cell removed from the queue is the nearest in number of moves; parent pointers) Tj ET
+BT /F1 8 Tf 48 602 Td (reconstruct the route.) Tj ET
+BT /F1 9 Tf 48 591 Td (Complexity / notes: Time and space: O\(rows * cols\). This is the complete working parking) Tj ET
+BT /F1 8 Tf 48 579 Td (search in lab1.) Tj ET
+BT /F2 12 Tf 48 561 Td (parkingsim.py) Tj ET
+BT /F1 9 Tf 48 543 Td (Purpose: Attempts the same nearest-parking problem as an interactive simulation.) Tj ET
+BT /F1 9 Tf 48 531 Td (Algorithm: Intended BFS with parent-pointer route reconstruction over four neighboring) Tj ET
+BT /F1 8 Tf 48 519 Td (cells.) Tj ET
+BT /F1 9 Tf 48 508 Td (Complexity / notes: Intended complexity: O\(rows * cols\) time and space. As written, it uses) Tj ET
+BT /F1 8 Tf 48 496 Td (for i in rows instead of range\(rows\), assigns into an uninitialized grid, and may use target) Tj ET
+BT /F1 8 Tf 48 485 Td (before assignment, so it is a broken draft rather than an executable implementation.) Tj ET
+BT /F2 12 Tf 48 467 Td (tic-tac-engine.py) Tj ET
+BT /F1 9 Tf 48 449 Td (Purpose: Runs human-versus-AI Tic-Tac-Toe; the human is X and the AI is O.) Tj ET
+BT /F1 9 Tf 48 437 Td (Algorithm: Minimax exhaustive game-tree search. Terminal states score O win = 1, X win = -1,) Tj ET
+BT /F1 8 Tf 48 425 Td (draw = 0. The AI maximizes its score while the simulated human minimizes it, and best_move) Tj ET
+BT /F1 8 Tf 48 414 Td (evaluates every legal AI move.) Tj ET
+BT /F1 9 Tf 48 403 Td (Complexity / notes: Worst-case work is approximately O\(9!\) without memoization; recursion) Tj ET
+BT /F1 8 Tf 48 391 Td (space is O\(9\). The AI is optimal for the scoring model.) Tj ET
+BT /F2 12 Tf 48 373 Td (tic-tac-toe.py) Tj ET
+BT /F1 9 Tf 48 355 Td (Purpose: Reads a 3 by 3 board and reports X or O as winner, otherwise Draw.) Tj ET
+BT /F1 9 Tf 48 343 Td (Algorithm: Direct rule-based scan of all rows, columns, and both diagonals. A line counts) Tj ET
+BT /F1 8 Tf 48 331 Td (only when its symbol is not the underscore empty marker.) Tj ET
+BT /F1 9 Tf 48 320 Td (Complexity / notes: For the fixed board: O\(1\) time and O\(1\) extra space. It assumes) Tj ET
+BT /F1 8 Tf 48 308 Td (well-formed input and does not detect contradictory multiple-winner boards.) Tj ET
+BT /F2 12 Tf 48 290 Td (water-jug-gen.py) Tj ET
+BT /F1 9 Tf 48 272 Td (Purpose: Finds operations that reach a requested pair of jug volumes.) Tj ET
+BT /F1 9 Tf 48 260 Td (Algorithm: BFS over a finite state space \(x, y\). For every state it generates fill, empty,) Tj ET
+BT /F1 8 Tf 48 248 Td (and both pour operations. A visited set prevents repetition; parent and action dictionaries) Tj ET
+BT /F1 8 Tf 48 237 Td (reconstruct the solution.) Tj ET
+BT /F1 9 Tf 48 226 Td (Complexity / notes: At most capacity1 * capacity2 volume states, with the same order of) Tj ET
+BT /F1 8 Tf 48 214 Td (space. The example searches capacities 4 and 3 from \(0, 0\) to \(2, 0\).) Tj ET
+BT /F2 12 Tf 48 196 Td (water-jug.py) Tj ET
+BT /F1 9 Tf 48 178 Td (Purpose: Demonstrates one fixed way to put exactly two liters in the 4-liter jug using a) Tj ET
+BT /F1 8 Tf 48 166 Td (3-liter jug.) Tj ET
+BT /F1 9 Tf 48 155 Td (Algorithm: Manual state-transition simulation: fill, pour, refill, transfer, and empty) Tj ET
+BT /F1 8 Tf 48 143 Td (operations are explicitly assigned and printed.) Tj ET
+BT /F1 9 Tf 48 132 Td (Complexity / notes: O\(1\) for this fixed sequence. It is not a general solver and does not) Tj ET
+BT /F1 8 Tf 48 120 Td (search alternatives.) Tj ET
+BT /F2 18 Tf 48 102 Td (lab2 - Agents and Cost-Based Navigation) Tj ET
+BT /F1 8 Tf 48 25 Td (AI Algorithms Guide  |  Page 1) Tj ET
+Q
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 4871 >>
+stream
+q
+0.10 0.20 0.30 rg
+BT /F2 12 Tf 48 790 Td (agent.py) Tj ET
+BT /F1 9 Tf 48 772 Td (Purpose: Compares a simple cleaning agent with a memory-based agent on a grid containing S,) Tj ET
+BT /F1 8 Tf 48 760 Td (D, and X cells.) Tj ET
+BT /F1 9 Tf 48 749 Td (Algorithm: Both use queue-based exploration. simple_agent enqueues every non-obstacle) Tj ET
+BT /F1 8 Tf 48 737 Td (neighbor, allowing repeated visits and stopping after 100 iterations. memory_agent marks) Tj ET
+BT /F1 8 Tf 48 726 Td (cells when enqueued, so each reachable cell is explored at most once. D cells become C when) Tj ET
+BT /F1 8 Tf 48 715 Td (cleaned.) Tj ET
+BT /F1 9 Tf 48 704 Td (Complexity / notes: Memory version: O\(rows * cols\) space and neighbor work. The simple) Tj ET
+BT /F1 8 Tf 48 692 Td (version can duplicate queue entries. Both mutate the same grid, so the second agent receives) Tj ET
+BT /F1 8 Tf 48 681 Td (the first agent's changes; its printed dirty value is the remaining argument, not the number) Tj ET
+BT /F1 8 Tf 48 670 Td (cleaned.) Tj ET
+BT /F2 12 Tf 48 652 Td (dij.py) Tj ET
+BT /F1 9 Tf 48 634 Td (Purpose: Compares a goal-based delivery agent with a utility-based agent from S through P to) Tj ET
+BT /F1 8 Tf 48 622 Td (G.) Tj ET
+BT /F1 9 Tf 48 611 Td (Algorithm: Goal-based search uses BFS for minimum movements. Utility-based search uses) Tj ET
+BT /F1 8 Tf 48 599 Td (Dijkstra separately for S-to-P and P-to-G. Cell cost is 0.4 distance + 0.3 energy + 0.2 risk) Tj ET
+BT /F1 8 Tf 48 588 Td (+ 0.1 traffic. Parent pointers reconstruct routes.) Tj ET
+BT /F1 9 Tf 48 577 Td (Complexity / notes: BFS is O\(V + E\). Heap-based Dijkstra is O\(\(V + E\) log V\) per stage.) Tj ET
+BT /F1 8 Tf 48 565 Td (Utility search can use more moves to avoid expensive cells.) Tj ET
+BT /F2 18 Tf 48 547 Td (lab3 - Graph Search) Tj ET
+BT /F2 12 Tf 48 519 Td (Bidirection_search.py) Tj ET
+BT /F1 9 Tf 48 501 Td (Purpose: Finds a path between two nodes in an undirected, interactively entered graph.) Tj ET
+BT /F1 9 Tf 48 489 Td (Algorithm: Bidirectional BFS. One FIFO search grows from the source and another from the) Tj ET
+BT /F1 8 Tf 48 477 Td (goal. When a newly discovered node appears in the other visited set, parent chains from the) Tj ET
+BT /F1 8 Tf 48 466 Td (meeting point are joined.) Tj ET
+BT /F1 9 Tf 48 455 Td (Complexity / notes: O\(V + E\) time and O\(V\) space for an unweighted graph, often with fewer) Tj ET
+BT /F1 8 Tf 48 443 Td (expansions than one-sided BFS.) Tj ET
+BT /F2 12 Tf 48 425 Td (DLS.py) Tj ET
+BT /F1 9 Tf 48 407 Td (Purpose: Solves an 8-puzzle only up to a user-supplied depth limit.) Tj ET
+BT /F1 9 Tf 48 395 Td (Algorithm: Depth-limited DFS with backtracking. The blank tile is swapped with each legal) Tj ET
+BT /F1 8 Tf 48 383 Td (neighbor. Recursion stops at the goal or depth limit. A path-local visited set prevents) Tj ET
+BT /F1 8 Tf 48 372 Td (cycles, then removes failed states during backtracking.) Tj ET
+BT /F1 9 Tf 48 361 Td (Complexity / notes: Worst case O\(b^d\) time and O\(bd\) space, where b is branching factor and) Tj ET
+BT /F1 8 Tf 48 349 Td (d is the depth limit. Reports recursive calls as generated nodes.) Tj ET
+BT /F2 18 Tf 48 331 Td (lab4 - 8-Puzzle Search Comparison) Tj ET
+BT /F2 12 Tf 48 303 Td (8_puzzle.py) Tj ET
+BT /F1 9 Tf 48 285 Td (Purpose: Compares BFS, depth-limited DFS, and A* on user-provided start and goal states.) Tj ET
+BT /F1 9 Tf 48 273 Td (Algorithm: BFS stores full paths in a FIFO queue. DFS recursively explores up to) Tj ET
+BT /F1 8 Tf 48 261 Td (depth_limit. A* orders states by f\(n\) = g\(n\) + h\(n\), where h counts nonblank tiles that do) Tj ET
+BT /F1 8 Tf 48 250 Td (not match the goal. Each move swaps the blank with a legal neighbor.) Tj ET
+BT /F1 9 Tf 48 239 Td (Complexity / notes: BFS is exponential in solution depth and memory. DFS is O\(b^d\) time with) Tj ET
+BT /F1 8 Tf 48 227 Td (O\(d\) depth. A* is exponential worst case but is guided by the heuristic. Full paths are) Tj ET
+BT /F1 8 Tf 48 216 Td (stored in queue entries.) Tj ET
+BT /F2 12 Tf 48 198 Td (shortest_path.py) Tj ET
+BT /F1 9 Tf 48 180 Td (Purpose: Finds a route from a fixed weighted graph node a to f.) Tj ET
+BT /F1 9 Tf 48 168 Td (Algorithm: Dijkstra uses a min-heap keyed by known cost g\(n\). A* uses f\(n\) = g\(n\) + h\(n\),) Tj ET
+BT /F1 8 Tf 48 156 Td (with the supplied heuristic, while both relax edges and store parent pointers.) Tj ET
+BT /F1 9 Tf 48 145 Td (Complexity / notes: With a binary heap, O\(\(V + E\) log V\) time and O\(V\) space. A* is optimal) Tj ET
+BT /F1 8 Tf 48 133 Td (when its heuristic is admissible and consistent.) Tj ET
+BT /F2 18 Tf 48 115 Td (lab5 - Local Optimization) Tj ET
+BT /F2 12 Tf 48 87 Td (hill_climb.py) Tj ET
+BT /F1 9 Tf 48 69 Td (Purpose: Finds a short route from warehouse W through delivery locations A-G and back.) Tj ET
+BT /F1 8 Tf 48 25 Td (AI Algorithms Guide  |  Page 2) Tj ET
+Q
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 4203 >>
+stream
+q
+0.10 0.20 0.30 rg
+BT /F1 9 Tf 48 790 Td (Algorithm: Steepest-ascent hill climbing on route permutations. A neighbor is made by) Tj ET
+BT /F1 8 Tf 48 778 Td (swapping two positions. All 21 swaps are scored; the best improving neighbor becomes the) Tj ET
+BT /F1 8 Tf 48 767 Td (next route. It stops at a local optimum.) Tj ET
+BT /F1 9 Tf 48 756 Td (Complexity / notes: About O\(n^3\) per iteration because O\(n^2\) neighbors each cost O\(n\) to) Tj ET
+BT /F1 8 Tf 48 744 Td (score; route storage is O\(n^2\) during evaluation. Random initialization means results vary) Tj ET
+BT /F1 8 Tf 48 733 Td (and local minima are possible.) Tj ET
+BT /F2 12 Tf 48 715 Td (annealing.py) Tj ET
+BT /F1 9 Tf 48 697 Td (Purpose: Searches for a low-distance delivery route with randomized exploration.) Tj ET
+BT /F1 9 Tf 48 685 Td (Algorithm: Simulated annealing. A random swap neighbor is always accepted when better; a) Tj ET
+BT /F1 8 Tf 48 673 Td (worse neighbor is accepted with probability exp\(-delta / temperature\). Temperature cools) Tj ET
+BT /F1 8 Tf 48 662 Td (geometrically from 100 by 0.95 until below 0.1, while the best route seen is retained.) Tj ET
+BT /F1 9 Tf 48 651 Td (Complexity / notes: For k iterations, about O\(k*n\) time to score routes and O\(n\) route) Tj ET
+BT /F1 8 Tf 48 639 Td (space. It can escape local minima but produces stochastic results.) Tj ET
+BT /F2 18 Tf 48 621 Td (lab7 - Genetic Algorithms) Tj ET
+BT /F2 12 Tf 48 593 Td (Q1.py) Tj ET
+BT /F1 9 Tf 48 575 Td (Purpose: Maximizes f\(x\) = 15x - x^2 for integer x in [0, 15].) Tj ET
+BT /F1 9 Tf 48 563 Td (Algorithm: Binary genetic algorithm. Four-bit chromosomes encode x. Each generation uses) Tj ET
+BT /F1 8 Tf 48 551 Td (roulette-wheel selection, one-point crossover, bit mutation at rate 0.05, and elitism that) Tj ET
+BT /F1 8 Tf 48 540 Td (preserves the best chromosome.) Tj ET
+BT /F1 9 Tf 48 529 Td (Complexity / notes: For population P, generations G, and chromosome length L: about O\(G*P*L\)) Tj ET
+BT /F1 8 Tf 48 517 Td (time and O\(P*L\) space. The exact integer maximum is 56 at x = 7 or x = 8, although a random) Tj ET
+BT /F1 8 Tf 48 506 Td (run is not guaranteed to find it.) Tj ET
+BT /F2 12 Tf 48 488 Td (Q2.py) Tj ET
+BT /F1 9 Tf 48 470 Td (Purpose: Solves a 0/1 knapsack with capacity 15 kg for items A-D.) Tj ET
+BT /F1 9 Tf 48 458 Td (Algorithm: Binary genetic algorithm. Each bit selects one item. Fitness sums values for) Tj ET
+BT /F1 8 Tf 48 446 Td (feasible chromosomes and returns zero when weight exceeds capacity. Roulette selection,) Tj ET
+BT /F1 8 Tf 48 435 Td (one-point crossover, mutation, and elitism evolve 25 generations.) Tj ET
+BT /F1 9 Tf 48 424 Td (Complexity / notes: About O\(G*P\) time and O\(P\) space for four items. The exact optimum is) Tj ET
+BT /F1 8 Tf 48 412 Td (1110: A+B+C, weight 10 kg and value Rs. 1600. A stochastic run can still return another) Tj ET
+BT /F1 8 Tf 48 401 Td (feasible result.) Tj ET
+BT /F2 18 Tf 48 383 Td (Algorithm themes) Tj ET
+BT /F1 9 Tf 48 355 Td (BFS is used when every move has equal cost and shortest depth is desired. Dijkstra handles) Tj ET
+BT /F1 9 Tf 48 343 Td (nonnegative weighted costs. A* adds a heuristic to focus search.) Tj ET
+BT /F1 9 Tf 48 324 Td (DFS and depth-limited search trade completeness for lower memory. Hill climbing and) Tj ET
+BT /F1 9 Tf 48 312 Td (simulated annealing optimize a route without enumerating the full state space.) Tj ET
+BT /F1 9 Tf 48 293 Td (Genetic algorithms evolve populations through selection, crossover, mutation, and elitism.) Tj ET
+BT /F1 9 Tf 48 281 Td (The collection moves from basic state-space search to informed search and stochastic) Tj ET
+BT /F1 9 Tf 48 269 Td (optimization.) Tj ET
+BT /F1 9 Tf 48 250 Td (Important distinction: a program can demonstrate an algorithm without being) Tj ET
+BT /F1 9 Tf 48 238 Td (production-ready. parking.py, water-jug-gen.py, dij.py, the 8-puzzle implementations, lab5,) Tj ET
+BT /F1 9 Tf 48 226 Td (and lab7 are the clearest working demonstrations. parkingsim.py contains input and) Tj ET
+BT /F1 9 Tf 48 214 Td (initialization errors, and several interactive programs assume well-formed input.) Tj ET
+BT /F1 8 Tf 48 25 Td (AI Algorithms Guide  |  Page 3) Tj ET
+Q
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000134 00000 n 
+0000000204 00000 n 
+0000000279 00000 n 
+0000005013 00000 n 
+0000005149 00000 n 
+0000010072 00000 n 
+0000010208 00000 n 
+0000014463 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+14600
+%%EOF
