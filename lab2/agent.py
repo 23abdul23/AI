@@ -111,3 +111,11 @@ for i in range(rows):
 simple_agent(grid,start,dirty)
 print("\n")
 memory_agent(grid,start,dirty)
+
+# Example test input:
+# 3
+# 4
+# S R D X
+# R X D R
+# D R R R
+# Expected: both agents print cleaning, movement, and action totals.

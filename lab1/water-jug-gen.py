@@ -103,3 +103,6 @@ water_jug_solver(
     (0, 0),     # Start state
     (2, 0)      # Goal state
 )
+
+# Example test: run the file directly.
+# Expected: a sequence of fill, pour, and empty actions ending at Goal State: (2, 0).

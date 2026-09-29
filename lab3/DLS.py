@@ -84,3 +84,13 @@ else:
     print("Total moves:", len(solution))
 
 print("Total nodes generated:", nodes_generated)
+
+# Example test input:
+# 1 2 3
+# 4 0 6
+# 7 5 8
+# 1 2 3
+# 4 5 6
+# 7 8 0
+# 5
+# Expected: goal found within depth limit and a move sequence is printed.

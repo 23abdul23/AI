@@ -25,3 +25,9 @@ if winner:
     print(f"{winner} Wins!")
 else:
     print("Draw")
+
+# Example test input:
+# X O X
+# O X _
+# _ O X
+# Expected output: X Wins!

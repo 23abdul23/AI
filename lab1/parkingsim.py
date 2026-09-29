@@ -84,5 +84,15 @@ for p in path:
 
 
 
+# Example test input (the current draft also has initialization errors):
+# 3
+# 4
+# E R X R
+# X R X A
+# R R R R
+
+
+
+
 
 

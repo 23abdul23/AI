@@ -115,3 +115,6 @@ def simulated_annealing():
 
 
 simulated_annealing()
+
+# Example test: run the file directly.
+# Expected: a random initial route, temperature iterations, and a best route summary.

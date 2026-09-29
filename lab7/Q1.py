@@ -73,3 +73,6 @@ print("x =", x)
 print("Maximum fitness found =", fitness(best))
 
 # Exact maximum over integer x in [0, 15] is 56 at x = 7 or x = 8.
+
+# Example test: run the file directly.
+# Expected: 20 generations and a final chromosome with fitness near or equal to 56.

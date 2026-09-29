@@ -122,6 +122,9 @@ print("====================")
 print("Shortest Path:", " -> ".join(path))
 print("Total Cost:", cost)
 
+# Example test: run the file directly.
+# Expected: Dijkstra and A* both print a shortest path from a to f and its cost.
+
 
 path, cost = a_star(
     graph,

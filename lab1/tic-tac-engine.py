@@ -111,6 +111,10 @@ while True:
             print("Draw!")
         break
 
+# Example test: run the file and enter these moves when prompted:
+# 0, 1, 3, 2, 6
+# Expected: the AI responds after each move and the game ends with a result.
+
     ai_move = best_move()
     board[ai_move] = "O"
 

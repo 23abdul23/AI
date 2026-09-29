@@ -1,16 +1,25 @@
 import heapq
 
+def read_state():
+    state = []
+    for _ in range(3):
+        values = input().split()
+        if len(values) == 1 and len(values[0]) == 3:
+            row = [int(value) for value in values[0]]
+        else:
+            row = [int(value) for value in values]
+
+        if len(row) != 3:
+            raise ValueError("Each puzzle row must contain exactly 3 values.")
+
+        state.append(row)
+    return state
+
 print("Enter initial state:")
-start = []
-for i in range(3):
-    row = list(map(int, input().split()))
-    start.append(row)
+start = read_state()
 
 print("Enter goal state:")
-goal = []
-for i in range(3):
-    row = list(map(int, input().split()))
-    goal.append(row)
+goal = read_state()
 
 depth_limit = int(input("Enter depth limit: "))
 nodes_generated = 0
@@ -57,6 +66,7 @@ def dfs(start, goal):
     visited = set()
 
     def search(current, path, depth):
+        global nodes_generated
         if current == goal:
             return path
 
@@ -198,3 +208,13 @@ for name, function in [
                         for x in row
                     )
                 )
+
+# Example test input (compact rows are supported):
+# 123
+# 456
+# 708
+# 123
+# 456
+# 780
+# 10
+# Expected: all three searches find a one-move solution.

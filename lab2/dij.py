@@ -284,3 +284,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Example test: run the file directly.
+# Expected: Goal Based Agent and Utility Based Agent routes from S to P to G.

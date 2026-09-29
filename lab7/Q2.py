@@ -94,3 +94,6 @@ print("Maximum value found: Rs.", fitness(best))
 
 # Exact optimum is chromosome 1110:
 # A + B + C => weight = 10 kg, value = Rs. 1600.
+
+# Example test: run the file directly.
+# Expected: 25 generations and a feasible final selection, ideally A, B, and C.

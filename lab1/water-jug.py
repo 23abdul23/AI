@@ -25,3 +25,6 @@ jug3 = 0
 print(f"Transfer remaining: 4L={jug4}, 3L={jug3}")
 
 print("\nGoal achieved: 4L jug contains exactly 2 liters.")
+
+# Example test: run the file directly.
+# Expected final line: Goal achieved: 4L jug contains exactly 2 liters.

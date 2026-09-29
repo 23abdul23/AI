@@ -98,3 +98,16 @@ else:
     print("Meeting point:", meeting_point)
     print("Nodes visited from source:", visited1)
     print("Nodes visited from goal:", visited2)
+
+# Example test input:
+# 5
+# A B C D E
+# 5
+# A B
+# B C
+# C D
+# D E
+# B E
+# A
+# E
+# Expected path: A -> B -> E (or another shortest path), with a meeting point.

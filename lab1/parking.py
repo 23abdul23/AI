@@ -84,3 +84,11 @@ else:
     print("Route:")
     for p in path:
         print(p)
+
+# Example test:
+# 3
+# 4
+# E R X R
+# X R X A
+# R R R R
+# Expected: nearest available parking space (1, 3), minimum movements 3.

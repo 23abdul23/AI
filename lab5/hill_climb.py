@@ -93,3 +93,6 @@ def hill_climbing():
 
 
 hill_climbing()
+
+# Example test: run the file directly.
+# Expected: a random initial route followed by improving routes until a local optimum.
